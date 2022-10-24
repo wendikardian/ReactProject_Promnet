@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# UTS Project for Internet Programming
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## This is about create Personal Portfolio using React JS Framework
 
 In the project directory, you can run:
 
