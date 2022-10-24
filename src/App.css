@@ -704,6 +704,22 @@ textarea:focus + .form-label {
     display: none;
 }
 
+.detail-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-page p{
+    background-color: #74ebd5c6;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+    padding: 20px;
+    border-radius: 20px;
+    margin: 100px;
+}
+
 @media only screen and (max-width: 500px){
 	.about-container img{
         width: 300px;

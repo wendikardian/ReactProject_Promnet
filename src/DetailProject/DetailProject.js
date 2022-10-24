@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import img1 from '../assets/project-1.png'
 import img2 from '../assets/project-2.png'
 import img3 from '../assets/project-3.png'
+import {Outlet, Link} from 'react-router-dom'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -45,7 +46,9 @@ export default function DetailProject() {
                       <div className="project-detail" data-aos="fade-left">
                           <h2> <span className="blue-text"> {item.title} </span><span className="pink"> {item.highlight}</span></h2>
                           <p>{item.desc}</p>
-                          <button>More Detail</button>
+                          <Link to={{
+                            pathname: '/projectdetail/'+ (index+1) 
+                          }} ><button>More Detail</button></Link>
                       </div>
                   </div>
                   
@@ -57,7 +60,9 @@ export default function DetailProject() {
                       <div className="project-detail" data-aos="fade-left">
                           <h2> <span className="blue-text"> {item.title} </span><span className="pink"> {item.highlight}</span></h2>
                           <p>{item.desc}</p>
-                          <button>More Detail</button>
+                          <Link to={{
+                            pathname: '/projectdetail/'+ (index+1) 
+                          }} ><button>More Detail</button></Link>
                       </div>
                       <img src={item.img} data-aos="fade-right" className="project-img" alt="" />
                   </div>

@@ -9,6 +9,7 @@ import Footer from './Footer/Footer';
 import Ending from './Ending/Ending';
 import Carousel from './Carousel/Carousel'
 import DetailProject from './DetailProject/DetailProject.js';
+import ProjectDetail from './DetailProject/ProjectDetail.js';
 import Form from './Form/Form';
 import About from './About/About';
 
@@ -60,6 +61,17 @@ const AboutPage = () => {
 }
 
 
+const ProjectDetailPage=() => {
+  return(
+    <>
+      <Header />
+      <ProjectDetail />
+      <Footer />
+    </>
+  )
+}
+
+
 function App() {
   return (
     <div className="App">
@@ -69,6 +81,7 @@ function App() {
         <Route path='project' element={<ProjectPages/> }/> 
         <Route path='contact' element={<Contact/> }/> 
         <Route path='about' element={<AboutPage/> }/> 
+        <Route path="/projectdetail/:data" element={<ProjectDetailPage />} />
       </Routes>
       </BrowserRouter>
     </div>

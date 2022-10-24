@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/game-development.jpg"
 import img2 from "../assets/web-development.jpg"
 import img3 from "../assets/web-design.jpg"
 import img4 from "../assets/kids-programming.jpg"
 import img5 from "../assets/apps.jpg"
 
+
 const Carousel = () => {
+  const [imageState, setImageState] = useState(1);
   useEffect(() => {
     var slides = document.querySelectorAll(".slide");
     slides[0].classList.add('active')
@@ -32,20 +34,19 @@ const Carousel = () => {
 
     var repeat = function (activeClass) {
       let active = document.getElementsByClassName("active");
-      let i = 1;
       var repeater = function () {
         setTimeout(function () {
           [...active].forEach(function (activeSlide) {
             activeSlide.classList.remove("active");
           });
 
-          slides[i].classList.add("active");
-          buttons[i].classList.add("active");
-          i++;
-          if (slides.length == i) {
-            i = 0;
+          slides[imageState].classList.add("active");
+          buttons[imageState].classList.add("active");
+          setImageState(imageState+= 1)
+          if (slides.length == imageState) {
+            imageState = 0;
           }
-          if (i >= slides.length) {
+          if (imageState >= slides.length) {
             return;
           }
           repeater();
@@ -53,9 +54,7 @@ const Carousel = () => {
       };
       repeater();
     };
-
     repeat()
-    
   }, []);
 
 
